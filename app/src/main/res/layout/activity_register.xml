@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    tools:context=".account.Register">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        android:gravity="center"
+        android:paddingTop="30dp"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:textColor="@color/theme_tele"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vui lòng nhập thông tin để tạo tài khoản"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="35dp"
+        android:textSize="15dp"
+        android:textColor="@color/theme_tele"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/etFullNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:layout_margin="10dp"
+        app:startIconDrawable="@drawable/icons8_user_48"
+        app:startIconTint="@color/theme_tele"
+        app:endIconMode="clear_text"
+        android:hint="Full Name"
+        android:textColorHint="@color/theme_tele"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:padding="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/theme_tele"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/etEmailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:layout_margin="10dp"
+        app:startIconDrawable="@drawable/icons8_user_48"
+        app:startIconTint="@color/theme_tele"
+        app:endIconMode="clear_text"
+        android:hint="Email"
+        android:textColorHint="@color/theme_tele"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:padding="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/theme_tele"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/etPasswordLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="5dp"
+        android:hint="Password"
+        android:textColorHint="@color/theme_tele"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/theme_tele"
+        app:startIconDrawable="@drawable/icons8_password_481"
+        app:startIconTint="@color/theme_tele"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:textColor="@color/theme_tele"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/etConfirmPasswordLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="5dp"
+        android:hint="Confirm Password"
+        android:textColorHint="@color/theme_tele"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/theme_tele"
+        app:startIconDrawable="@drawable/icons8_password_481"
+        app:startIconTint="@color/theme_tele"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:textColor="@color/theme_tele"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/theme_tele"
+        android:padding="10dp"
+        android:text="Register"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:background="@drawable/button_custom"
+        android:textColor="#D0EAE7" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đã có tài khoản? "
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:clickable="true"/>
+        <TextView
+            android:id="@+id/tvGoBackLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textColor="@color/theme_tele"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:clickable="true"/>
+    </LinearLayout>
+
+</LinearLayout>
