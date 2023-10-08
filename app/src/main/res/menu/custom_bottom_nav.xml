@@ -7,9 +7,14 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/product"
-        android:icon="@drawable/icons8_member_50"
-        android:title="Product" />
+        android:id="@+id/detail"
+        android:icon="@drawable/icons8_detail_50"
+        android:title="Detail" />
+
+    <item
+        android:id="@+id/post"
+        android:icon="@drawable/icons8_add_50"
+        android:title="Post" />
 
     <item
         android:id="@+id/me"

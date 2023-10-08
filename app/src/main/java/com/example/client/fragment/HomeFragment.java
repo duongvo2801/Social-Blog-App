@@ -8,6 +8,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -47,10 +49,7 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         recyclerView = view.findViewById(R.id.product_recycler_view);
 
-
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
-//        productAdapter = new ProductAdapter();
-
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),1));
 
         productAdapter = new ProductAdapter(productList, new ProductAdapter.OnItemClickListener() {
             @Override
@@ -61,10 +60,18 @@ public class HomeFragment extends Fragment {
                 bundle.putParcelable("selected_product", product);
                 detailFragment.setArguments(bundle);
 
-                requireFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, detailFragment)
-                        .addToBackStack(null)
-                        .commit();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+                transaction.replace(R.id.item_detail, detailFragment); // R.id.fragment_container là ID của vị trí (container) bạn muốn thay thế Fragment
+                transaction.addToBackStack(null); // Đặt Fragment hiện tại vào ngăn xếp lịch sử
+
+                transaction.commit();
+
+//                requireFragmentManager().beginTransaction()
+//                        .replace(R.id.item_detail, detailFragment)
+//                        .addToBackStack(null)
+//                        .commit();
             }
         });
         recyclerView.setAdapter(productAdapter);

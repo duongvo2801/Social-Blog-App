@@ -18,8 +18,6 @@ public class Product implements Parcelable {
     private String name;
 
     //new category
-    @SerializedName("category")
-    private Category category;
     @SerializedName("price")
     private Object price;
 
@@ -28,18 +26,6 @@ public class Product implements Parcelable {
 
     @SerializedName("description")
     private String description;
-
-//    @SerializedName("imageBase64")
-//    private String imageBase64;
-//
-//
-//    public String getImageBase64() {
-//        return imageBase64;
-//    }
-
-//    public void setImageBase64(String imageBase64) {
-//        this.imageBase64 = imageBase64;
-//    }
 
     public Product() {
     }
@@ -58,14 +44,6 @@ public class Product implements Parcelable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
     }
 
     public Object getPrice() {
@@ -96,11 +74,7 @@ public class Product implements Parcelable {
         id = in.readString();
         name = in.readString();
         description = in.readString();
-        // Assuming you will change the Object type for price and image to appropriate types in the future.
-        // For now, I'm using readString for simplicity. Adjust as needed.
         price = in.readString();
-//        image = in.readString();
-//        image = in.createByteArray();
         image = in.readParcelable(Image.class.getClassLoader());
     }
 
@@ -124,15 +98,11 @@ public class Product implements Parcelable {
 
     @Override
     public void writeToParcel(@NonNull Parcel dest, int i) {
-//        dest.writeString(id);
         dest.writeString(String.valueOf(id));
         dest.writeString(name);
         dest.writeString(description);
 
-//        dest.writeString((String) price);
         dest.writeString(String.valueOf(price));
-//        dest.writeString((String) image);
-//        dest.writeByteArray(image);
         dest.writeParcelable(image, i);
     }
     public static class Image implements Parcelable {
@@ -175,7 +145,7 @@ public class Product implements Parcelable {
         public void setDataAsByteArray(byte[] imageData) {
             this.data = new ArrayList<>();
             for (byte b : imageData) {
-                // Convert each byte to an integer (considering byte as unsigned) and add to the list
+
                 this.data.add(b & 0xFF);
             }
         }

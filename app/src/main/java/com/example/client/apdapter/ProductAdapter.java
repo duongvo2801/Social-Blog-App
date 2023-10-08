@@ -40,17 +40,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         Product product = products.get(position);
         holder.productName.setText(product.getName());
         holder.productPrice.setText(String.valueOf(product.getPrice()));
+        holder.productDescription.setText(String.valueOf(product.getDescription()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 listener.onItemClick(product);
             }
         });
-        // Using Glide to load the image
-//        Glide.with(holder.productImage.getContext())
-//                .load(product.getImage())
-//                .into(holder.productImage);
-        // Convert image buffer to Bitmap and set to ImageView
         byte[] imageData = getImageBuffer(product);
         if (imageData != null) {
             Bitmap bitmap = convertBufferToBitmap(imageData);
@@ -78,7 +74,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     }
 
     static class ProductViewHolder extends RecyclerView.ViewHolder {
-        TextView productName,productPrice;
+        TextView productName,productPrice, productDescription;
         ImageView productImage;
 
 
@@ -87,6 +83,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             productName = itemView.findViewById(R.id.product_name);
             productPrice = itemView.findViewById(R.id.product_price);
             productImage = itemView.findViewById(R.id.product_image);
+            productDescription = itemView.findViewById(R.id.product_description);
             // Initialize other views here
         }
 

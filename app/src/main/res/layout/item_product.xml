@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="8dp"
@@ -11,31 +11,67 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical" >
-
-                <ImageView
-                    android:id="@+id/product_image"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:scaleType="centerCrop"
-                    android:layout_gravity="center"
-                    android:src="@drawable/default_image"
-                    android:layout_marginTop="10dp"
-                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:cardElevation="100dp"
+                            app:cardCornerRadius="100dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="13dp">
+                                <ImageView
+                                    android:id="@+id/imgProfilePost"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/icons8_account_100"
+                                    />
+                        </androidx.cardview.widget.CardView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+                                <TextView
+                                    android:id="@+id/tvFullName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Duong"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"/>
+                                <TextView
+                                    android:id="@+id/tvTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2 hours ago"
+                                    android:textSize="16sp"/>
+                        </LinearLayout>
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/product_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="6dp"
-                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
-                    android:scaleType="centerCrop"
-                    android:gravity="center"
                     android:text="Bakery"
-                    android:textColor="@color/purple_200"
+                    android:textColor="@color/color_main"
                     android:layout_marginTop="4dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/product_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/default_image"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
                     />
 
                 <TextView
@@ -44,10 +80,50 @@
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
                     android:gravity="center"
+                    android:visibility="gone"
                     android:text="5"
                     android:layout_marginTop="2dp"
-                    android:scaleType="centerCrop"
                     />
-        </LinearLayout>
 
+                <TextView
+                    android:id="@+id/product_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:gravity="fill"
+                    android:layout_margin="7dp"
+                    android:layout_gravity="clip_vertical"
+                    android:text="Yes"
+                    android:maxLines="3"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Like"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Comment"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Share"/>
+
+                </LinearLayout>
+        </LinearLayout>
 </androidx.cardview.widget.CardView>

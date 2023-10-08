@@ -36,8 +36,6 @@ public class MeFragment extends Fragment {
     Button btnSentLink;
     FirebaseAuth firebaseAuth;
     private StorageReference storageReference;
-    private FirebaseFirestore firestore;
-    private String userId;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

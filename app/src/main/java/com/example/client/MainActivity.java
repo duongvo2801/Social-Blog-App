@@ -12,7 +12,6 @@ import android.view.MenuItem;
 import com.example.client.src.ViewPagerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-// D:\.Class\Project 1\Assignment\app\src\main
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navigationView;
     private ViewPager viewPager;
@@ -35,11 +34,14 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.home:
                         viewPager.setCurrentItem(0);
                         break;
-                    case R.id.product:
+                    case R.id.detail:
                         viewPager.setCurrentItem(1);
                         break;
-                    case R.id.me:
+                    case R.id.post:
                         viewPager.setCurrentItem(2);
+                        break;
+                    case R.id.me:
+                        viewPager.setCurrentItem(3);
                         break;
                     default:
                         break;
@@ -66,9 +68,12 @@ public class MainActivity extends AppCompatActivity {
                         navigationView.getMenu().findItem(R.id.home).setChecked(true);
                         break;
                     case 1:
-                        navigationView.getMenu().findItem(R.id.product).setChecked(true);
+                        navigationView.getMenu().findItem(R.id.detail).setChecked(true);
                         break;
                     case 2:
+                        navigationView.getMenu().findItem(R.id.post).setChecked(true);
+                        break;
+                    case 3:
                         navigationView.getMenu().findItem(R.id.me).setChecked(true);
                         break;
                 }

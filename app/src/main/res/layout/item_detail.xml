@@ -3,14 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".fragment.ProductDetailFragment">
+    android:padding="16dp">
 
     <LinearLayout
-        android:id="@+id/fragment_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible"
         android:orientation="vertical">
         <ImageView
             android:id="@+id/product_image"
@@ -18,12 +15,11 @@
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:layout_marginBottom="10dp"/>
+            android:paddingBottom="8dp" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name"
+            android:text="Name Product"
             android:textColor="@color/black"
             />
         <TextView
@@ -34,6 +30,14 @@
             android:paddingTop="8dp"
             android:textStyle="bold"
             android:textColor="@color/black"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category Product"
+            android:textColor="@color/black"
+
             />
         <TextView
             android:id="@+id/product_category"
@@ -43,12 +47,12 @@
             android:paddingTop="8dp"
             android:textStyle="italic"
             android:textColor="@color/black"
-            android:visibility="gone"
+
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Group"
+            android:text="Price Product"
             android:textColor="@color/black"
 
             />
@@ -65,7 +69,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description"
+            android:text="Description Product"
             android:textColor="@color/black"
 
 
@@ -83,27 +87,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="15dp"
             >
             <Button
                 android:id="@+id/btnEditProduct"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_custom"
                 android:text="Edit"
-                android:layout_weight="5"
-                android:layout_margin="3dp"
-                android:textSize="15sp"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
                 />
             <Button
                 android:id="@+id/btnDeleteProduct"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_custom"
                 android:text="Delete"
-                android:layout_weight="5"
-                android:layout_margin="3dp"
-                android:textSize="15sp"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
                 />
         </LinearLayout>
 
