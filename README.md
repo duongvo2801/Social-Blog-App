@@ -10,5 +10,5 @@ https://github.com/duongvo2801/Social-Blog-App.git
 https://github.com/duongvo2801/Social-Blog-Server.git
 ```
 ## Tech Stack
- - Java, Nodejs
- - Other Service: Firebase
+ - Kotlin
+ - Nodejs, SQL Server
